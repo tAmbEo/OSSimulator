@@ -263,7 +263,7 @@ public class CPU {
     private boolean isMemoryFull() {
         boolean ret = false;
         int size = pcRegister + spRegister;
-        if (mode == OSCommon.USER_MODE && size > 119) ret = true;
+        if (mode == OSCommon.USER_MODE && size > 999) ret = true;
         if (mode == OSCommon.SYSTEM_MODE && size > 499) ret = true;
         if (mode == OSCommon.SYSTEM_MODE && spRegister > 499) ret = true;
         return ret;
